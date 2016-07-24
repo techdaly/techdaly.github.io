@@ -5,6 +5,10 @@ body, html {
 .container {
   border: 1px black dashed;
   padding: 7%;
+  max-width: 1440px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header {
@@ -12,15 +16,29 @@ body, html {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7%;
+
+  @media only screen and (max-width: 1120px) {
+    flex-flow: column;
+    align-items: flex-start;
+  }
   .site-name {
     background-color: black;
     width: 40%;
     height: 50px;
+
+    @media only screen and (max-width: 1120px) {
+      width: 100%;
+      margin-bottom: 3%;
+    }
   }
   .contact {
     background-color: black;
     width: 25%;
     height: 50px;
+
+    @media only screen and (max-width: 1120px) {
+      width: 50%;
+    }
   }
 }
 
@@ -29,33 +47,83 @@ body, html {
   height: 75px;
   margin-bottom: 7%;
 }
-
-
 .tile-row {
   border: 1px black dashed;
   display: flex;
   justify-content: space-between;
+
+  @media only screen and (min-width: 601px) and (max-width: 1120px) {
+    flex-flow: column;
+    align-items: flex-start;
+
+    .tile:nth-child(even) {
+      flex-flow: row-reverse;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    flex-flow: column;
+    align-items: flex-start;
+  }
   .tile{
     width: calc(33% - 20px);
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    @media only screen and (min-width: 601px) and (max-width: 1120px) {
+      flex-flow: row;
+      width: 100%;
+      margin-bottom: 3%;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 600px) {
+      flex-flow: column;
+      width: 100%;
+      margin-bottom: 10%;
+      justify-content: space-between;
+    }
     .tile-img {
       background-color: black;
       width: 50%;
       height: 150px;
-      margin-bottom: 15px;
+
+      @media only screen and (min-width: 601px) and (max-width: 1120px) {
+        width: 30%;
+        height: 150px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 3%;
+        padding-top: 50px;
+        border-top: 1px dashed black;
+      }
     }
-    .tile-title {
-      background-color: black;
-      width: 50%;
-      height: 25px;
-      margin-bottom: 30px;
-    }
-    .tile-description {
-      background-color: black;
+    .title-combo {
       width: 100%;
-      height: 100px;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      @media only screen and (min-width: 601px) and (max-width: 1120px) {
+        width: 60%;
+        margin-bottom: 3%;
+        align-items: flex-start;
+      }
+
+      .tile-title {
+        background-color: black;
+        width: 50%;
+        height: 25px;
+        margin-bottom: 30px;
+      }
+      .tile-description {
+        background-color: black;
+        width: 100%;
+        height: 100px;
+      }
     }
   }
 }
