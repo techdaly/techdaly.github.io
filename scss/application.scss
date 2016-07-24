@@ -1,3 +1,61 @@
-body {
+body, html {
+  margin: 0px;
+}
+
+.container {
+  border: 1px black dashed;
+  padding: 7%;
+}
+
+.header {
+  border: 1px black dashed;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7%;
+  .site-name {
+    background-color: black;
+    width: 40%;
+    height: 50px;
+  }
+  .contact {
+    background-color: black;
+    width: 25%;
+    height: 50px;
+  }
+}
+
+.sub-header {
   background-color: black;
+  height: 75px;
+  margin-bottom: 7%;
+}
+
+
+.tile-row {
+  border: 1px black dashed;
+  display: flex;
+  justify-content: space-between;
+  .tile{
+    width: calc(33% - 20px);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    .tile-img {
+      background-color: black;
+      width: 50%;
+      height: 150px;
+      margin-bottom: 15px;
+    }
+    .tile-title {
+      background-color: black;
+      width: 50%;
+      height: 25px;
+      margin-bottom: 30px;
+    }
+    .tile-description {
+      background-color: black;
+      width: 100%;
+      height: 100px;
+    }
+  }
 }
