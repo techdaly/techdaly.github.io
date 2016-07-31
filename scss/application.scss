@@ -1,6 +1,30 @@
 //font-family: 'Syncopate', sans-serif;
 //font-family: 'Open Sans', sans-serif;
 
+#gjones {
+  border: 1px solid gray;
+}
+
+.row-title {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid black;
+  padding-bottom: 0px;
+  margin-bottom: 40px;
+
+  .row-title-text {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 2.5em;
+    margin: 0px;
+    padding: 0px;
+
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
 .site-name-text {
   font-family: 'Syncopate', sans-serif;
   font-size: 2.5em;
@@ -42,7 +66,7 @@
 
 .title {
   font-family: 'Open Sans', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 800;
   margin: 0px;
   padding: 0px;
@@ -88,6 +112,10 @@ body, html {
     padding-bottom: 7px;
     border-radius: 5px;
   }
+
+  .contact:hover {
+    opacity: .7;
+  }
 }
 
 .sub-header {
@@ -97,8 +125,6 @@ body, html {
   justify-content: center;
 
   @media only screen and (min-width: 601px) and (max-width: 1120px){
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
     padding-top: 50px;
     margin-top: 50px;
     padding-bottom: 60px;
@@ -106,8 +132,6 @@ body, html {
   }
 
   @media only screen and (max-width: 600px) {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
     padding-top: 50px;
     margin-top: 50px;
     padding-bottom: 60px;
@@ -117,6 +141,9 @@ body, html {
 .tile-row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 125px;
+
+
 
   @media only screen and (min-width: 601px) and (max-width: 1120px) {
     flex-flow: column;
@@ -144,17 +171,20 @@ body, html {
       justify-content: space-between;
       align-items: flex-start;
       padding-bottom: 50px;
-      border-bottom: 1px solid black;
+      // border-bottom: 1px solid black;
+
+
 
     }
 
     @media only screen and (max-width: 600px) {
       flex-flow: column;
       width: 100%;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       justify-content: space-between;
       padding-bottom: 50px;
-      border-bottom: 1px solid black;
+      // border-bottom: 1px solid black;
+
     }
     .tile-img {
       width: 100%;
@@ -199,7 +229,9 @@ body, html {
       }
 
       .tile-title {
+        display: flex;
         margin-bottom: 30px;
+        justify-content: center;
       }
       .tile-description {
         width: 100%;
