@@ -64,6 +64,7 @@
   border-radius: 5px;
 }
 
+
 .title {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
@@ -204,8 +205,9 @@ body, html {
       }
     }
 
-    .tile-img:hover {
+    .hover:hover {
       opacity: .7;
+      }
     }
     .title-combo {
       width: 100%;
@@ -238,4 +240,3 @@ body, html {
       }
     }
   }
-}
